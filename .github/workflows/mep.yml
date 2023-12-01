@@ -5,8 +5,8 @@ on:
     inputs:
       endev:
       description: 'Environnement à utiliser'
-			  required: true
-			  default: 'dev'
+      required: true
+      default: 'dev'
 
 jobs:
   get-source:
