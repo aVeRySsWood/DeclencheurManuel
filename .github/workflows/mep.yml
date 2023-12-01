@@ -16,4 +16,4 @@ jobs:
         run: echo "Workflow démarré sur ${{ github.ref }}"
       - name: Checkout
         if: ${{ github.ref == 'refs/heads/main' }}
-        uses: actions/checkout@4.1.1
+        uses: actions/checkout@v4.1.1
