@@ -3,7 +3,7 @@ name: Mise en production
 on:
   workflow_dispatch:
     inputs:
-      server:
+      environement:
         description: 'Environnement à utiliser'
         required: true
         default: 'dev'
@@ -18,11 +18,11 @@ jobs:
         if: ${{ github.ref == 'refs/heads/main' }}
         uses: actions/checkout@v4.1.1
       - name: Echo for Prod
-        if: github.event.input.environment == 'prod'
+        if: github.event.input.environement == 'prod'
         run: echo "prod"
       - name: Echo for Qual
-        if: github.event.input.environment == 'qual'
+        if: github.event.input.environement == 'qual'
         run: echo "qual"
       - name: Echo for Dev
-        if: github.event.input.environment == 'dev'
+        if: github.event.input.environement == 'dev'
         run: echo "dev"
