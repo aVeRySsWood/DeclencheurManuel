@@ -3,10 +3,10 @@ name: Mise en production
 on:
   workflow_dispatch:
     inputs:
-      endev:
-      description: 'Environnement à utiliser'
-      required: true
-      default: 'dev'
+      server:
+        description: 'Environnement à utiliser'
+        required: true
+        default: 'dev'
 
 jobs:
   get-source:
