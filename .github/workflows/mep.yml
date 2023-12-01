@@ -17,3 +17,12 @@ jobs:
       - name: Checkout
         if: ${{ github.ref == 'refs/heads/main' }}
         uses: actions/checkout@v4.1.1
+      - name: Echo for Prod
+        if: github.event.input.environment == 'prod'
+        run: echo "prod"
+      - name: Echo for Qual
+        if: github.event.input.environment == 'qual'
+        run: echo "qual"
+      - name: Echo for Dev
+        if: github.event.input.environment == 'dev'
+        run: echo "dev"
